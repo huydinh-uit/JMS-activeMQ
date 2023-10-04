@@ -1,0 +1,35 @@
+2023-10-04 13:55:54,042 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[D:\study\ActiveMq\apache-activemq-5.18.2-bin\apache-activemq-5.18.2\bin\..\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2023-10-04 13:55:54,047 | INFO  | Starting Persistence Adapter: KahaDBPersistenceAdapter[D:\study\ActiveMq\apache-activemq-5.18.2-bin\apache-activemq-5.18.2\bin\..\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2023-10-04 13:55:54,074 | INFO  | Starting KahaDBStore | org.apache.activemq.store.kahadb.KahaDBStore | main
+2023-10-04 13:55:54,075 | INFO  | Opening MessageDatabase | org.apache.activemq.store.kahadb.MessageDatabase | main
+2023-10-04 13:55:54,346 | INFO  | Starting Temp Data Store | org.apache.activemq.broker.BrokerService | main
+2023-10-04 13:55:54,347 | INFO  | PListStore:[D:\study\ActiveMq\apache-activemq-5.18.2-bin\apache-activemq-5.18.2\bin\..\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2023-10-04 13:55:54,347 | INFO  | Starting Job Scheduler Store | org.apache.activemq.broker.BrokerService | main
+2023-10-04 13:55:54,347 | INFO  | Persistence Adapter successfully started | org.apache.activemq.broker.BrokerService | main
+2023-10-04 13:55:54,490 | INFO  | Apache ActiveMQ 5.18.2 (localhost, ID:LAP13280-62341-1696402554358-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2023-10-04 13:55:54,508 | INFO  | Listening for connections at: tcp://LAP13280:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2023-10-04 13:55:54,508 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2023-10-04 13:55:54,511 | INFO  | Listening for connections at: amqp://LAP13280:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2023-10-04 13:55:54,511 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2023-10-04 13:55:54,515 | INFO  | Listening for connections at: stomp://LAP13280:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2023-10-04 13:55:54,516 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2023-10-04 13:55:54,520 | INFO  | Listening for connections at: mqtt://LAP13280:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2023-10-04 13:55:54,521 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2023-10-04 13:55:54,527 | INFO  | Starting Jetty server | org.apache.activemq.transport.WebTransportServerSupport | main
+2023-10-04 13:55:54,580 | INFO  | Creating Jetty connector | org.apache.activemq.transport.WebTransportServerSupport | main
+2023-10-04 13:55:54,631 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@1f7076bc{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2023-10-04 13:55:54,736 | INFO  | Listening for connections at ws://LAP13280:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2023-10-04 13:55:54,736 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2023-10-04 13:55:54,736 | INFO  | Apache ActiveMQ 5.18.2 (localhost, ID:LAP13280-62341-1696402554358-0:1) started | org.apache.activemq.broker.BrokerService | main
+2023-10-04 13:55:54,736 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2023-10-04 13:55:54,743 | WARN  | Store limit is 102400 mb (current store usage is 0 mb). The data directory: D:\study\ActiveMq\apache-activemq-5.18.2-bin\apache-activemq-5.18.2\bin\..\data\kahadb only has 31959 mb of usable space. - resetting to maximum available disk space: 31959 mb | org.apache.activemq.broker.BrokerService | main
+2023-10-04 13:55:54,745 | WARN  | Temporary Store limit is 51200 mb (current store usage is 0 mb). The data directory: D:\study\ActiveMq\apache-activemq-5.18.2-bin\apache-activemq-5.18.2\bin\..\data only has 31959 mb of usable space. - resetting to maximum available disk space: 31959 mb | org.apache.activemq.broker.BrokerService | main
+2023-10-04 13:55:55,421 | INFO  | ActiveMQ WebConsole available at http://127.0.0.1:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2023-10-04 13:55:55,421 | INFO  | ActiveMQ Jolokia REST API available at http://127.0.0.1:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2023-10-04 14:29:02,613 | WARN  | Transport Connection to: tcp://127.0.0.1:62771 failed: Frame size of 1 GB larger than max allowed 100 MB | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:62771@61616
+2023-10-04 14:29:03,671 | WARN  | Transport Connection to: tcp://127.0.0.1:62772 failed: Frame size of 1 GB larger than max allowed 100 MB | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:62772@61616
+2023-10-04 14:29:33,689 | WARN  | Transport Connection to: tcp://127.0.0.1:62775 failed: Channel was inactive (no connection attempt made) for too (>30000) long: tcp://127.0.0.1:62775 | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ InactivityMonitor Worker 1
+2023-10-04 14:29:33,689 | WARN  | Transport Connection to: tcp://127.0.0.1:62774 failed: Channel was inactive (no connection attempt made) for too (>30000) long: tcp://127.0.0.1:62774 | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ InactivityMonitor Worker 0
+2023-10-04 15:35:00,664 | INFO  | Connector vm://localhost started | org.apache.activemq.broker.TransportConnector | qtp1465263219-42
+2023-10-04 15:51:34,816 | WARN  | Transport Connection to: tcp://127.0.0.1:63932 failed: Channel was inactive for too (>30000) long: tcp://127.0.0.1:63932 | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ InactivityMonitor Worker 0
+2023-10-04 16:29:55,441 | INFO  | Connector vm://localhost stopped | org.apache.activemq.broker.TransportConnector | Session-HouseKeeper-3178219a-1
