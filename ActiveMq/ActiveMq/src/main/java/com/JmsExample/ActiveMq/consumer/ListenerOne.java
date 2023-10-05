@@ -9,12 +9,12 @@ import org.springframework.stereotype.Component;
 
 
 @Component
-public class Listener {
+public class ListenerOne {
     private static final Logger LOGGER = LoggerFactory.getLogger(Listener.class);
 
     @JmsListener(destination = "second", containerFactory = "jmsListenerContainerFactory",
-            subscription = "Listener 0")
+            subscription = "Listener 1")
     public void receiveMessage(SystemMessage SystemMessage) {
-        LOGGER.info("I am Listener Received message='{}'", SystemMessage);
+        LOGGER.info("I am ListenerOne Received message ='{}'", SystemMessage);
     }
 }

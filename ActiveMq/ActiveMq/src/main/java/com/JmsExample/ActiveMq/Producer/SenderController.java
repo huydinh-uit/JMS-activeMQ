@@ -13,13 +13,20 @@ public class SenderController {
     @Autowired
     JmsTemplate jmsTemplate;
 
-    @PostMapping("/sendMessage")
-    public ResponseEntity<String> send(@RequestBody SystemMessage systemMessage) {
+    @PostMapping("/sendMessageToQueue")
+    public ResponseEntity<String> sendMessageToQueue(@RequestBody SystemMessage systemMessage) {
         try {
-            jmsTemplate.convertAndSend("first", systemMessage, m -> {
-                m.setStringProperty("source", systemMessage.getSource());
-                return m;
-            });
+            jmsTemplate.convertAndSend("first", systemMessage);
+            return ResponseEntity.ok("Message sent");
+        }catch (Exception e){
+            return ResponseEntity.badRequest().body("Error: " + e.getMessage());
+        }
+
+    }
+    @PostMapping("/sendMessageToTopic")
+    public ResponseEntity<String> sendMessageToTopic(@RequestBody SystemMessage systemMessage) {
+        try {
+            jmsTemplate.convertAndSend("second", systemMessage);
             return ResponseEntity.ok("Message sent");
         }catch (Exception e){
             return ResponseEntity.badRequest().body("Error: " + e.getMessage());
