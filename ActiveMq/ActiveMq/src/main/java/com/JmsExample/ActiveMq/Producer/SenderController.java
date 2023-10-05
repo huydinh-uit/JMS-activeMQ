@@ -14,9 +14,12 @@ public class SenderController {
     JmsTemplate jmsTemplate;
 
     @PostMapping("/sendMessage")
-    public ResponseEntity<String> send(@RequestBody SystemMessage message) {
+    public ResponseEntity<String> send(@RequestBody SystemMessage systemMessage) {
         try {
-            jmsTemplate.convertAndSend("first", message);
+            jmsTemplate.convertAndSend("first", systemMessage, m -> {
+                m.setStringProperty("source", systemMessage.getSource());
+                return m;
+            });
             return ResponseEntity.ok("Message sent");
         }catch (Exception e){
             return ResponseEntity.badRequest().body("Error: " + e.getMessage());

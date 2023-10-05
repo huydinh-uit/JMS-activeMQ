@@ -12,8 +12,8 @@ import org.springframework.stereotype.Component;
 public class Listener {
     private static final Logger LOGGER = LoggerFactory.getLogger(Listener.class);
 
-    @JmsListener(destination = "first")
-    public void receiveMessage(SystemMessage message) {
-        LOGGER.info("Received message='{}'", message);
+    @JmsListener(destination = "first", selector = "source='System A'")
+    public void receiveMessage(SystemMessage SystemMessage) {
+        LOGGER.info("Received message='{}'", SystemMessage);
     }
 }
