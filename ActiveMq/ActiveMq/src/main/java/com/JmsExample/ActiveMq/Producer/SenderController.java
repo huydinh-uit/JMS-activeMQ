@@ -26,7 +26,10 @@ public class SenderController {
     @PostMapping("/sendMessageToTopic")
     public ResponseEntity<String> sendMessageToTopic(@RequestBody SystemMessage systemMessage) {
         try {
-            jmsTemplate.convertAndSend("second", systemMessage);
+            jmsTemplate.convertAndSend("second", systemMessage, m -> {
+                m.setStringProperty("source", systemMessage.getSource());
+                return m;
+            });
             return ResponseEntity.ok("Message sent");
         }catch (Exception e){
             return ResponseEntity.badRequest().body("Error: " + e.getMessage());
