@@ -16,7 +16,7 @@ public class JmsConfig {
                 new DefaultJmsListenerContainerFactory();
 
         jmsListenerContainerFactory.setConnectionFactory(connectionFactory);
-        jmsListenerContainerFactory.setConcurrency("3-10");
+        jmsListenerContainerFactory.setConcurrency("1-1");
         // true: using jms topic, false: using jms queue
         jmsListenerContainerFactory.setPubSubDomain(true);
 
